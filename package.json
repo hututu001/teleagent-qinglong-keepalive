@@ -1,0 +1,16 @@
+{
+  "name": "teleagent-qinglong-keepalive",
+  "version": "0.1.0",
+  "description": "TeleAgent 星辰云电脑青龙巡检：活动刷新、休眠唤醒、三次重试、最终失败通知",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node tests/keepalive.test.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hututu001/teleagent-qinglong-keepalive.git"
+  }
+}

@@ -1,0 +1,12 @@
+node_modules/
+credentials.json
+credentials.*.json
+!credentials.example.json
+.env
+.env.*
+data/
+logs/
+*.log
+jwt.txt
+token.json
+.DS_Store

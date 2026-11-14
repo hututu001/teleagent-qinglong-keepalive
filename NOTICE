@@ -1,0 +1,52 @@
+TeleAgent Qinglong Keepalive
+==========================
+
+Upstream source
+---------------
+
+The keepalive script in this repository is derived from qinglong-keepalive.js
+in the following project:
+
+https://github.com/mojed123/teleagent-cloud-helper
+
+Upstream copyright: Copyright (c) 2026 mojed123
+Upstream license: MIT License
+
+The upstream LICENSE is preserved verbatim in this repository's LICENSE file.
+The upstream LICENSE blob is 12ad522dee208b3017421f5f4073cd0cf81d2c43.
+
+Modifications in this distribution
+---------------------------------
+
+- Restrict each task to an explicitly configured instance ID.
+- Gate start, waiting, refresh and connect actions by the observed instance state.
+- Use an elapsed-time deadline when waiting for an instance to become ready.
+- Retry the complete per-account flow up to three times, with a five-second
+  delay and a fresh status query before each attempt.
+- Validate HTTP responses, business errors and required response fields.
+- Request instance/refresh before obtaining a connection ticket.
+- Report successful refresh/ticket requests without claiming permanent uptime.
+- Reuse Qinglong's sendNotify module and notify only on final workflow failure
+  or a configuration/startup failure; successful checks and wakeups are silent.
+- Add a runner that loads a private credentials file and isolates proxy
+  environment variables within the task process.
+- Add offline VM-based tests and deployment documentation.
+
+Refresh endpoint provenance
+---------------------------
+
+The instance/refresh request was implemented from the official TeleAgent web
+application's file-access flow. Its successful response is not evidence of a
+permanent desktop session or a guarantee against platform sleep/shutdown.
+
+The public ihpdc/teleagent-baohuo repository and related forks were inspected
+for comparison. No source code from those repositories is included in this
+distribution.
+
+Runtime dependencies and naming
+------------------------------
+
+Qinglong's sendNotify.js is an external module supplied by the user's Qinglong
+installation; it is not distributed here. TeleAgent, Qinglong and related
+product names belong to their respective owners. This repository is an
+independent derivative and is not an official service of those projects.
