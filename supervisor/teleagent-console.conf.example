@@ -1,0 +1,18 @@
+[program:teleagent-console]
+directory=/opt/teleagent-console
+command=/usr/bin/env -u HTTP_PROXY -u HTTPS_PROXY -u ALL_PROXY -u http_proxy -u https_proxy -u all_proxy -u NODE_OPTIONS -u NODE_USE_ENV_PROXY -u GLOBAL_AGENT_HTTP_PROXY /usr/bin/node /opt/teleagent-console/server.js
+environment=TA_HOST="0.0.0.0",TA_PORT="50004",TA_DATA_DIR="/opt/teleagent-console/data",TA_CREDENTIALS_FILE="/opt/teleagent-console/data/credentials.json",TZ="Asia/Shanghai",NODE_ENV="production",NO_PROXY="*",no_proxy="*"
+autostart=true
+autorestart=true
+startsecs=3
+startretries=3
+stopsignal=TERM
+stopasgroup=true
+killasgroup=true
+umask=0077
+stdout_logfile=/opt/teleagent-console/data/supervisor.stdout.log
+stderr_logfile=/opt/teleagent-console/data/supervisor.stderr.log
+stdout_logfile_maxbytes=5MB
+stdout_logfile_backups=2
+stderr_logfile_maxbytes=5MB
+stderr_logfile_backups=2

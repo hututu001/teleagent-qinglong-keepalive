@@ -39,9 +39,15 @@ The instance/refresh request was implemented from the official TeleAgent web
 application's file-access flow. Its successful response is not evidence of a
 permanent desktop session or a guarantee against platform sleep/shutdown.
 
-The public ihpdc/teleagent-baohuo repository and related forks were inspected
-for comparison. No source code from those repositories is included in this
-distribution.
+The public ihpdc/teleagent-baohuo repository was inspected as a feature and API
+reference:
+
+https://github.com/ihpdc/teleagent-baohuo
+
+The console modules in this repository were implemented independently. No
+source code from that repository is included. Its repository page did not
+declare a license when inspected; this notice does not grant or imply any
+license to its code.
 
 Runtime dependencies and naming
 ------------------------------

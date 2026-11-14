@@ -1,13 +1,14 @@
 {
   "name": "teleagent-qinglong-keepalive",
-  "version": "0.1.0",
-  "description": "TeleAgent 星辰云电脑青龙巡检：活动刷新、休眠唤醒、三次重试、最终失败通知",
+  "version": "0.2.0",
+  "description": "TeleAgent 星辰云电脑青龙保活与独立管理控制台",
   "license": "MIT",
   "engines": {
     "node": ">=20"
   },
   "scripts": {
-    "test": "node tests/keepalive.test.cjs"
+    "start": "node server.js",
+    "test": "node --test tests/*.test.cjs"
   },
   "repository": {
     "type": "git",
